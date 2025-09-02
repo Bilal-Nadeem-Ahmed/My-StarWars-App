@@ -5,19 +5,24 @@
     </template>
 
     <v-app-bar-title
-      >My<img
+      ><img
         style="vertical-align: middle"
         src="/assets/logo.png"
         alt="Logo"
         class="mx-2"
         height="28"
       />
-      App - {{ $router.currentRoute.value.name }}</v-app-bar-title
+      Character App - {{ $router.currentRoute.value.name }}</v-app-bar-title
     >
     <v-spacer />
-    <v-switch density="compact" :hide-details="true" @click="theme.toggle()" class="pr-4">
+    <v-switch
+      color="primary-darken-2"
+      density="compact"
+      :hide-details="true"
+      @click="theme.toggle()"
+      class="pr-4"
+    >
       <template #prepend>
-        <v-icon icon="mdi-domain" color="yellow-darken-2"> {{}} </v-icon>
         <svg-icon
           type="mdi"
           style="color: yellow"
