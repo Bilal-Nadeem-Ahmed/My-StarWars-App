@@ -78,15 +78,15 @@
 <script setup lang="ts">
 import { StarWarsApiService } from '@/services/StarWarsApiService'
 import { FavouriteService } from '@/services/FavouriteService'
-import type { Icharacter } from '@/types/Icharacter'
 import { computed, onMounted, ref } from 'vue'
 import { mdiArrowRight, mdiStarOutline, mdiStar } from '@mdi/js'
+import type { ICharacter } from '@/types/ICharacter'
 
 const service = new StarWarsApiService()
 const favouriteService = new FavouriteService()
 
 const isCharactersLoading = ref(false)
-const characters = ref<Icharacter[]>([])
+const characters = ref<ICharacter[]>([])
 onMounted(() => {
   GetAllCharacters()
 })

@@ -1,4 +1,4 @@
-import type { IPerson } from '@/types/IPerson'
+import type { ICharacter } from '@/types/ICharacter'
 const key = 'favouriteCharacters'
 
 export class FavouriteService {
@@ -7,11 +7,11 @@ export class FavouriteService {
     return stored ? JSON.parse(stored) : []
   }
 
-  public IsFavourite(character: IPerson): boolean {
+  public IsFavourite(character: ICharacter): boolean {
     return this.GetFavourites().includes(character.url)
   }
 
-  public ToggleFavourite(character: IPerson): void {
+  public ToggleFavourite(character: ICharacter): void {
     const favourites = this.GetFavourites()
     const index = favourites.indexOf(character.url)
 
