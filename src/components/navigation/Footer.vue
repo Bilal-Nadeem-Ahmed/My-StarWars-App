@@ -9,7 +9,20 @@
         height="28"
       />
       Character App</span
-    ></v-footer
-  >
+    >
+    <v-snackbar
+      v-model="snackBarStore.$state.snackbar"
+      :timeout="snackBarStore.$state.timeout"
+      :color="snackBarStore.$state.color"
+      elevation="24"
+    >
+      <div class="text-subtitle-1 text-center">
+        {{ snackBarStore.$state.message }}
+      </div>
+    </v-snackbar>
+  </v-footer>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useSnackbarStore } from '@/stores/snackbarStore.ts'
+const snackBarStore = useSnackbarStore()
+</script>
