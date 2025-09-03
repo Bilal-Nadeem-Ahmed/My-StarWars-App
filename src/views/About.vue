@@ -62,10 +62,3 @@
 <script setup lang="ts">
 import { mdiAccountGroup, mdiStar, mdiPencil } from '@mdi/js'
 </script>
-
-<style scoped>
-h1,
-h3 {
-  font-family: 'Star Jedi', sans-serif;
-}
-</style>

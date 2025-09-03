@@ -15,7 +15,7 @@
       Character App - {{ $router.currentRoute.value.name }}</v-app-bar-title
     >
     <v-spacer />
-    <v-switch
+    <!-- <v-switch
       color="primary-darken-2"
       density="compact"
       :hide-details="true"
@@ -30,8 +30,9 @@
           :size="20"
         ></svg-icon>
       </template>
-    </v-switch>
+    </v-switch> -->
   </v-app-bar>
+  <!-- didnt have time to implemet the theme fully  -->
 </template>
 
 <script setup lang="ts">
