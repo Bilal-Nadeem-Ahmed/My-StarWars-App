@@ -56,7 +56,7 @@
               @click.stop="OnReviewCharacterClicked(character)"
             >
               Review
-              <svg-icon class="ml-2" type="mdi" :path="mdiMessageDraw" :size="20"></svg-icon>
+              <svg-icon class="ml-2" type="mdi" :path="mdiMessageDraw" :size="16"></svg-icon>
             </v-btn>
             <v-btn
               variant="outlined"
@@ -67,7 +67,7 @@
               @click="ViewDetails(character)"
             >
               View
-              <svg-icon class="ml-2" type="mdi" :path="mdiArrowRight" :size="20"></svg-icon>
+              <svg-icon class="ml-2" type="mdi" :path="mdiArrowRight" :size="16"></svg-icon>
             </v-btn>
           </v-card-actions>
         </v-card>

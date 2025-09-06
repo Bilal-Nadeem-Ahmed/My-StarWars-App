@@ -1,6 +1,6 @@
 <template>
   <v-dialog v-model="dialog" max-width="500">
-    <v-card>
+    <v-card v-if="character?.name">
       <v-toolbar flat color="primary" dark>
         <v-toolbar-title>Review: {{ character.name }}</v-toolbar-title>
         <v-spacer></v-spacer>
@@ -108,7 +108,7 @@ import type { IReview } from '@/types/IReview'
 import { StarWarsApiService } from '@/services/StarWarsApiService'
 
 interface Props {
-  character: ICharacter
+  character?: ICharacter
   modelValue: boolean
 }
 
@@ -149,7 +149,7 @@ const submitReview = async () => {
   if (!isValid) return
 
   const review: IReview = {
-    characterId: parseInt(stringService.GetIdFromUrl(props.character.url)),
+    characterId: parseInt(stringService.GetIdFromUrl(props.character!.url)),
     reviewer: reviewer.value,
     text: text.value,
     rating: rating.value,
