@@ -1,6 +1,6 @@
-# starwars
+# My Starwars App
 
-A basic web application built with vue 3 and vuetify. It uses the starwars api found here : https://swapi.info/people. It displays a list of characters, allows users to view more details and submit a review. Currently when submitting a review , it goes to a nonexistant endpoint so returns an error. There is also a branch named 'my-api' which can be used with the backend found here: https://github.com/Bilal-Nadeem-Ahmed/StarWarsApi. 
+A basic web application built with vue 3 and vuetify. It uses the starwars api found [here](https://swapi.info/people). It displays a list of characters, allows users to view more details and submit a review. Currently when submitting a review , it goes to a nonexistant endpoint so returns an error. There is also a branch named 'my-api' which can be used with the backend found [here](https://github.com/Bilal-Nadeem-Ahmed/StarWarsApi). 
 
 This has a basic endpoint called characters that returns the same data. It is just a small application that demonstrates a simple controller and in memory caching with a few simple tests. if i had time id organise the data coming back and add more to the front end to that a user could view more information about things like vehicles, species and so on. 
 
