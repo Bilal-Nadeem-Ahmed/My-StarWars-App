@@ -2,13 +2,15 @@ import type { ICharacter } from '@/types/ICharacter'
 import axios, { type AxiosResponse } from 'axios'
 import { useSnackbarStore } from '@/stores/snackbarStore'
 import type { IReview } from '@/types/IReview'
-const baseURL = 'https://swapi.info/api/'
+const baseURL = 'https://localhost:7197/'
 
 export class StarWarsApiService {
   private snackbar = useSnackbarStore()
   public async GetAllCharacters(): Promise<ICharacter[]> {
     try {
-      const response: AxiosResponse<ICharacter[]> = await axios.get(`${baseURL}people`)
+      const response: AxiosResponse<ICharacter[]> = await axios.get(
+        `${baseURL}Character/GetAllCharacters`,
+      )
       return response.data
     } catch (error) {
       const errorMessage = 'Failed to fetch characters'
